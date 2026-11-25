@@ -924,6 +924,17 @@ details.soon{margin-top:18px}
 @media (min-width:1000px){.ho-know{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:420px){.ho-line{grid-template-columns:auto minmax(0,1fr) auto}.ho-line .ho-step{grid-column:2/3}.ho-line .ho-x{grid-row:1;grid-column:3}.ho-opts.ho-n3{grid-template-columns:1fr 1fr 1fr}.ho-o{padding:9px 10px}.ho-m.me .ho-n{left:-28px}.ho-m.us .ho-n{right:-28px}.ho-msgs{padding:18px 30px 20px}.ho-m{max-width:100%}}
 @media (prefers-reduced-motion:reduce){.ho-bb,.ho-chev{transition:none}}
+
+/* ---- phone fit: nothing may push the page wider than the screen (iPhone Safari sizes some items by their content) ---- */
+html,body{max-width:100%;overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+.fnav{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+@media (min-width:760px){.fnav{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+.ftab{min-width:0;overflow:hidden}
+.ft-t,.ft-t b,.ft-t small{min-width:0;max-width:100%}
+.ft-t b{overflow-wrap:anywhere}
+@media (max-width:759px){.ft-t small{white-space:normal}}
+main,.view,.prods,.prod,.cat-head,.facts,.p-head,.p-opts{min-width:0;max-width:100%}
 </style>
 </head>
 <body>
